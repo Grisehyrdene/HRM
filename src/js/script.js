@@ -55,5 +55,28 @@ const slider = tns({
       });
   });
 
-    
+  const formProperties = {
+    rules:{
+        name: 'required', 
+        phone: 'required',
+        email: {
+            required: true,
+            email: true
+        }
+    },
+    messages: {
+      name: "Пожалуйста, введите Ваше имя.",
+      email: {
+        required: "Пожалуйста, введите Ваш email адрес.",
+        email: "Ваш email адрес должен был в формате name@domain.com"
+      },
+      phone: "Пожалуйста, введите ваш номер телефона"
+    }
+}
+  $('#consultation-form').validate(formProperties);
+  $('#consultation form').validate(formProperties);
+  $('#order form').validate(formProperties);
+  
+  $('input[name=phone]').mask("+7 (999) 999-9999");
+
 })(jQuery);
