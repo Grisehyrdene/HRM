@@ -41,5 +41,14 @@
             color: #ff0000;
         }
     }
-    
+
+}
+.advantages__ico_animated{
+    animation-name: hearthbeat;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    &:hover{
+        animation-play-state: paused;
+    }
 }
